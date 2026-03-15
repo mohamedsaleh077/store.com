@@ -39,7 +39,6 @@
     - Returning Requests
     - list of current wishlists
     - list of current carts
-    - Inventory Alerts and overview
     - Store Users
     - Statics for each month (top: 10 / 100)
         - Top ordered/Returned Categories/subcategories/Products/Brands
