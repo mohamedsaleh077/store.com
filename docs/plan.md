@@ -27,11 +27,12 @@
 ### User
  - Confirmed Email
  - 2FA
+
 ### Admin
  - have a dash board for each section
     - Categories (CRUD)
     - Sub Categories (CRUD)
-    - Products (CRUD) (How many bought it, Who boaught it (go to order details), Stock, Coupons)
+    - Products (CRUD) (How many bought it, Who boaught it (go to order details), Stock)
     - Notifications
     - Orders (Current / Delevered)
     - Returned Products
@@ -40,7 +41,6 @@
     - list of current carts
     - Inventory Alerts and overview
     - Store Users
-    - Copouns (Discounts - auther)
     - Statics for each month (top: 10 / 100)
         - Top ordered/Returned Categories/subcategories/Products/Brands
         - Top Ordered Places
@@ -50,14 +50,14 @@
         - Top Success Discounts
         - Top rated orders
         - Top Wishlisted products
-        - Top Copouns
+        - Top shared products
     - Statics for each month about
         - Total Revenue
         - Total Sold Products
         - Overall Products Rating
         - Total Returned products
         - wishlisted products
-        - used coponuns
+        - shared products
 
 ### Customer
  - Search products
@@ -74,6 +74,7 @@
  - notifications
  - monitor the order status
  - submit orders
+ - share product
 
 ### Deleviry
  - get orders notifications
