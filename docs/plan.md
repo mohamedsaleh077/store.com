@@ -33,6 +33,7 @@
     - Categories (CRUD)
     - Sub Categories (CRUD)
     - Products (CRUD) (How many bought it, Who boaught it (go to order details), Stock)
+    - Brands (CRUD)
     - Notifications
     - Orders (Current / Delevered)
     - Returned Products
