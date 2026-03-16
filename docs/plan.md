@@ -36,8 +36,6 @@
     - Brands (CRUD)
     - Notifications
     - Orders (Current / Delevered)
-    - Returned Products
-    - Returning Requests
     - list of current wishlists
     - list of current carts
     - Store Users
@@ -55,7 +53,6 @@
         - Total Revenue
         - Total Sold Products
         - Overall Products Rating
-        - Total Returned products
         - wishlisted products
         - shared products
 
@@ -67,8 +64,7 @@
  - search history
  - visited products
  - current orders
- - Delivered Orders (Able to applu a returning request)
- - Returned products
+ - Delivered Orders
  - Rating product
  - Writing a review
  - notifications
