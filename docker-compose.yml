@@ -1,0 +1,85 @@
+name: storedotcom
+services:
+  admin_webserver:
+    container_name: admin_panel
+    build: docker/php-fpm/
+    volumes:
+      - ./websites/admin/:/var/www/html/
+
+  main_webserver:
+    container_name: web_app
+    build: docker/php-fpm/
+    volumes:
+      - ./websites/main/:/var/www/html/
+
+  delivery_webserver:
+    container_name: landing_page
+    build: docker/php-fpm/
+    volumes:
+      - ./websites/delivery/:/var/www/html/
+
+  nginx:
+    container_name: nginx
+    build: docker/nginx/
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - admin_webserver
+      - main_webserver
+      - delivery_webserver
+
+  postgresql:
+    image: postgres:14.21-alpine3.23
+    container_name: database
+    env_file:
+      - docker/.env
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_volume:/var/lib/postgresql/data/:rw
+      - ./postgre/init/:/docker-entrypoint-initdb.d/:ro
+    command: [ "postgres", "-c", "log_statement=none", "-c", "log_min_duration_statement=1000", "-c", "log_connections=on", "-c", "log_disconnections=on" ]   
+    healthcheck:
+      test: [ "CMD-SHELL", 'pg_isready -U "$${POSTGRES_USER:-postgres}" -d "$${POSTGRES_DB:-postgres}" -h localhost || exit 1' ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    stop_grace_period: 120s
+
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: database-admin
+    env_file:
+      - docker/.env
+    ports:
+      - "8081:80"
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+    depends_on:
+      postgresql:
+        condition: service_healthy
+    links:
+      - postgresql
+
+  redis:
+    image: redis:7.4-alpine
+    container_name: Redis
+    restart: always
+    ports:
+      - "6379:6379"
+    command: redis-server --save 20 1 --loglevel warning
+    volumes:
+      - redis:/data
+
+volumes:
+  pg_volume:
+    driver: local
+  pgadmin-data:
+    driver: local
+  redis:
+    driver: local
