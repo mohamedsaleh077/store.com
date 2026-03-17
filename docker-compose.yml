@@ -1,22 +1,10 @@
 name: storedotcom
 services:
-  admin_webserver:
-    container_name: admin_panel
-    build: docker/php-fpm/
-    volumes:
-      - ./websites/admin/:/var/www/html/
-
   main_webserver:
     container_name: web_app
     build: docker/php-fpm/
     volumes:
       - ./websites/main/:/var/www/html/
-
-  delivery_webserver:
-    container_name: landing_page
-    build: docker/php-fpm/
-    volumes:
-      - ./websites/delivery/:/var/www/html/
 
   nginx:
     container_name: nginx
@@ -40,7 +28,7 @@ services:
       - "5432:5432"
     volumes:
       - pg_volume:/var/lib/postgresql/data/:rw
-      - ./postgre/init/:/docker-entrypoint-initdb.d/:ro
+      - docker/postgre/init/:/docker-entrypoint-initdb.d/:ro
     command: [ "postgres", "-c", "log_statement=none", "-c", "log_min_duration_statement=1000", "-c", "log_connections=on", "-c", "log_disconnections=on" ]   
     healthcheck:
       test: [ "CMD-SHELL", 'pg_isready -U "$${POSTGRES_USER:-postgres}" -d "$${POSTGRES_DB:-postgres}" -h localhost || exit 1' ]
