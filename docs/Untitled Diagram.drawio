@@ -1,28 +1,37 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36" version="29.6.3">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" version="29.6.6">
   <diagram name="Page-1" id="DBvizZYbutxGRfbS8CSc">
-    <mxGraphModel dx="813" dy="426" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1200" math="0" shadow="0">
+    <mxGraphModel dx="767" dy="425" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1200" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="2U19QTyslEHqEpw4Y4bT-27" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;App&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- url: array&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- subdomain: string&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- method: string&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- action: string&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- params: array&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ __construct(Router Router): void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;-&amp;nbsp;ParseURL(): void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;-&amp;nbsp;SetAction(): void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;-&amp;nbsp;SetParams(): void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- exec(): void&lt;/p&gt;" vertex="1">
-          <mxGeometry height="191" width="200" x="382" y="9" as="geometry" />
+          <mxGeometry height="191" width="200" x="382" y="30" as="geometry" />
         </mxCell>
         <mxCell id="2U19QTyslEHqEpw4Y4bT-29" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Router&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ routes: array&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ add(string $subdomain, string $controller, string $action, array $params, string $controllerClass, string $methodClass): void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ getRoutes(): array&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ goto(&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;string $subdomain, string $controller, string $action, array $params): void&lt;/span&gt;&lt;/p&gt;" vertex="1">
-          <mxGeometry height="160" width="250" x="30" y="19" as="geometry" />
+          <mxGeometry height="160" width="250" x="30" y="40" as="geometry" />
         </mxCell>
         <mxCell id="2U19QTyslEHqEpw4Y4bT-30" edge="1" parent="1" source="2U19QTyslEHqEpw4Y4bT-29" style="endArrow=open;endFill=0;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=1;exitX=1.004;exitY=0.053;exitDx=0;exitDy=0;exitPerimeter=0;dashed=1;dashPattern=8 8;curved=0;entryX=-0.012;entryY=0.644;entryDx=0;entryDy=0;entryPerimeter=0;" target="2U19QTyslEHqEpw4Y4bT-27" value="">
           <mxGeometry relative="1" x="-1" as="geometry">
             <Array as="points">
-              <mxPoint x="310" y="38" />
-              <mxPoint x="310" y="132" />
-              <mxPoint x="348" y="132" />
+              <mxPoint x="310" y="59" />
+              <mxPoint x="310" y="153" />
+              <mxPoint x="348" y="153" />
             </Array>
-            <mxPoint x="290" y="150" as="sourcePoint" />
-            <mxPoint x="430" y="130" as="targetPoint" />
+            <mxPoint x="290" y="171" as="sourcePoint" />
+            <mxPoint x="430" y="151" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="2U19QTyslEHqEpw4Y4bT-49" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Session&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ __construct(): void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ getSession(string $Session): mixed&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ getCsrf(): string&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ setSession(string $Session): void&lt;/p&gt;" vertex="1">
-          <mxGeometry height="90" width="220" x="45" y="210" as="geometry" />
+          <mxGeometry height="90" width="220" x="30" y="231" as="geometry" />
+        </mxCell>
+        <mxCell id="IFXkhmC6DVibDgwuTERE-2" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Class&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ field: Type&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ method(): Type&lt;/p&gt;" vertex="1">
+          <mxGeometry height="90" width="160" x="30" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="IFXkhmC6DVibDgwuTERE-3" parent="1" style="label;fontStyle=0;strokeColor=none;fillColor=none;align=left;verticalAlign=top;overflow=hidden;spacingLeft=28;spacingRight=4;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;imageWidth=16;imageHeight=16;whiteSpace=wrap;html=1;image=img/clipart/Gear_128x128.png" value="User Classes&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="26" width="120" x="30" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="IFXkhmC6DVibDgwuTERE-4" parent="1" style="label;fontStyle=0;strokeColor=none;fillColor=none;align=left;verticalAlign=top;overflow=hidden;spacingLeft=28;spacingRight=4;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;imageWidth=16;imageHeight=16;whiteSpace=wrap;html=1;image=img/clipart/Gear_128x128.png" value="&lt;div&gt;System Classes&lt;/div&gt;" vertex="1">
+          <mxGeometry height="26" width="120" x="30" y="4" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
