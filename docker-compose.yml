@@ -2,6 +2,8 @@ name: storedotcom
 services:
   main_webserver:
     container_name: web_app
+    env_file:
+      - ./docker/.env
     build: docker/php-fpm/
     ports: 
       - "80:80"
