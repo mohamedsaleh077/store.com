@@ -21,5 +21,15 @@ require_once "../app/init.php";
 
 use Core\App;
 use Core\Router;
+use Core\View;
+use Core\Middleware;
+use Core\SessionManager;
+use Core\Container;
 
-$app = new App(new Router());
+$container = new Container();
+$container->Add(SessionManager::class, fn($c) => new SessionManager);
+$container->Add(Middleware::class, fn($c) => new Middleware($c->Make(SessionManager::class)));
+$container->Add(Router::class, fn($c) => new Router(new View(), $c->Make(Middleware::class)));
+$container->Add(App::class, fn($c) => new App($c->Make(Router::class)));
+
+$app = $container->Make(App::class);
