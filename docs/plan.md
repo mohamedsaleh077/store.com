@@ -3,7 +3,7 @@
  - PostgreSQL
  - Bootstrap
  - JQuery
- - nginx `admin.store.com`, `delivery.store.com` and `store.com`
+ - ~~nginx `admin.store.com`, `delivery.store.com` and `store.com`~~ Apache
  - Anubis (Web Firewall)
  - Composer
  - ~~Radis~~
@@ -18,8 +18,8 @@
 
 ## APIs
  - ~~ALTCHA Captcha~~
- - Mailtrap for mail confirmation
- - Paymob for payment
+ - Mailtrap
+ - Paymob
  - ~~Gotify~~
  - ~~Open Maps~~
 
