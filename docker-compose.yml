@@ -3,8 +3,10 @@ services:
   main_webserver:
     container_name: web_app
     build: docker/php-fpm/
+    ports: 
+      - "80:80"
     volumes:
-      - ./websites/:/var/www/html/
+      - ./websites/:/sites/localhost/html/public/
 #
 #  nginx:
 #    container_name: nginx
