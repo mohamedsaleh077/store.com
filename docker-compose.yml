@@ -4,17 +4,17 @@ services:
     container_name: web_app
     build: docker/php-fpm/
     volumes:
-      - ./websites/main/:/var/www/html/
-
-  nginx:
-    container_name: nginx
-    build: ./docker/nginx/
-    restart: unless-stopped
-    ports:
-      - "80:80"
-      - "443:443"
-    depends_on:
-      - main_webserver
+      - ./websites/:/var/www/html/
+#
+#  nginx:
+#    container_name: nginx
+#    build: ./docker/nginx/
+#    restart: unless-stopped
+#    ports:
+#      - "80:80"
+#      - "443:443"
+#    depends_on:
+#      - main_webserver
 
   postgresql:
     image: postgres:14.21-alpine3.23
@@ -35,7 +35,6 @@ services:
       retries: 5
       start_period: 60s
     stop_grace_period: 120s
-
 
   pgadmin:
     image: dpage/pgadmin4
