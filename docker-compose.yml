@@ -14,9 +14,7 @@ services:
       - "80:80"
       - "443:443"
     depends_on:
-      - admin_webserver
       - main_webserver
-      - delivery_webserver
 
   postgresql:
     image: postgres:14.21-alpine3.23
