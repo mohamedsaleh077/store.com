@@ -100,9 +100,6 @@
             <mxPoint x="530" y="650" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="IFXkhmC6DVibDgwuTERE-28" parent="1" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;dashed=1;dashPattern=1 4;" value="" vertex="1">
-          <mxGeometry height="8" width="1920" y="321" as="geometry" />
-        </mxCell>
         <mxCell id="KTNSFiOdiAD8BTK8Zdgi-2" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
@@ -202,7 +199,9 @@
           <mxGeometry height="26" width="160" y="60" as="geometry" />
         </mxCell>
         <mxCell id="KTNSFiOdiAD8BTK8Zdgi-27" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;CategoriesModel&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" vertex="1">
-          <mxGeometry height="60" width="160" x="690" y="490" as="geometry" />
+          <mxGeometry height="60" width="160" x="690" y="490" as="geometry">
+            <mxRectangle height="30" width="130" x="690" y="490" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="KTNSFiOdiAD8BTK8Zdgi-29" parent="KTNSFiOdiAD8BTK8Zdgi-27" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
           <mxGeometry height="8" width="160" y="26" as="geometry" />
@@ -211,7 +210,9 @@
           <mxGeometry height="26" width="160" y="34" as="geometry" />
         </mxCell>
         <mxCell id="KTNSFiOdiAD8BTK8Zdgi-32" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;SubcategoriesModel&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" vertex="1">
-          <mxGeometry height="60" width="160" x="690" y="560" as="geometry" />
+          <mxGeometry height="60" width="160" x="690" y="560" as="geometry">
+            <mxRectangle height="30" width="150" x="690" y="560" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="KTNSFiOdiAD8BTK8Zdgi-33" parent="KTNSFiOdiAD8BTK8Zdgi-32" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
           <mxGeometry height="8" width="160" y="26" as="geometry" />
@@ -220,7 +221,9 @@
           <mxGeometry height="26" width="160" y="34" as="geometry" />
         </mxCell>
         <mxCell id="KTNSFiOdiAD8BTK8Zdgi-36" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;ProductsModel&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" vertex="1">
-          <mxGeometry height="60" width="160" x="690" y="630" as="geometry" />
+          <mxGeometry height="60" width="160" x="690" y="630" as="geometry">
+            <mxRectangle height="30" width="120" x="690" y="630" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="KTNSFiOdiAD8BTK8Zdgi-38" parent="KTNSFiOdiAD8BTK8Zdgi-36" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
           <mxGeometry height="34" width="160" y="26" as="geometry" />
