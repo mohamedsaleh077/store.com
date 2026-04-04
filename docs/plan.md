@@ -6,7 +6,7 @@
  - nginx `admin.store.com`, `delivery.store.com` and `store.com`
  - Anubis (Web Firewall)
  - Composer
- - Radis
+ - ~~Radis~~
 
 ## Framworks and Libraries
  - LNO
@@ -17,10 +17,10 @@
  - verifiedjoseph/gotify-api-php
 
 ## APIs
- - ALTCHA Captcha
+ - ~~ALTCHA Captcha~~
  - Mailtrap for mail confirmation
  - Paymob for payment
- - Gotify
+ - ~~Gotify~~
  - ~~Open Maps~~
 
 ## Functional Requirments
