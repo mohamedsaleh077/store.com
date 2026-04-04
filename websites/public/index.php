@@ -17,4 +17,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-echo 'Hello, World!';
+require_once "../app/init.php";
+
+use Core\App;
+use Core\Router;
+
+$app = new App(new Router());
