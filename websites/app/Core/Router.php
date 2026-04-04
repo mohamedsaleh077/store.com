@@ -25,7 +25,16 @@ use function http_response_code;
 class Router {
     private static array $routes = []; 
     
-    public function __construct(private iView $Viewer) {  
+    public function __construct(private iView $Viewer, private iMiddleware $middleware) {  
+    }
+    
+    private function MiddlewareCheck($rules): bool
+    {
+        foreach($rules as $rule){
+            if($this->middleware->$rule === false){
+                return false;
+            }
+        }
     }
     
     public function Add(string $method, string $route, string $target, array $rules = [], int $allowedParams = 0): void
@@ -34,19 +43,19 @@ class Router {
     }
     
     // URI: /unit/subunit/param1/param2 and who hand this is the App class.
-    public function GoTo(string $method, string $route, array $params): void
+    public function GoTo(string $method, string $path, array $params): void
     {
         if(!isset(self::$routes[$method])){
             http_response_code(405);
             die();
         }
         
-        if(!isset(self::$routes[$method][$route])){
+        if(!isset(self::$routes[$method][$path])){
             http_response_code(404);
             die();
         }
         
-        $route = self::$routes[$method][$route];
+        $route = self::$routes[$method][$path];
         
         if(count($params) !== $route["neededParams"]){
             http_response_code(400);
