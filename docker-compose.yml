@@ -8,7 +8,7 @@ services:
 
   nginx:
     container_name: nginx
-    build: docker/nginx/
+    build: ./docker/nginx/
     restart: unless-stopped
     ports:
       - "80:80"
@@ -20,13 +20,13 @@ services:
     image: postgres:14.21-alpine3.23
     container_name: database
     env_file:
-      - docker/.env
+      - ./docker/.env
     restart: unless-stopped
     ports:
       - "5432:5432"
     volumes:
       - pg_volume:/var/lib/postgresql/data/:rw
-      - docker/postgre/init/:/docker-entrypoint-initdb.d/:ro
+      - ./docker/postgre/init/:/docker-entrypoint-initdb.d/:ro
     command: [ "postgres", "-c", "log_statement=none", "-c", "log_min_duration_statement=1000", "-c", "log_connections=on", "-c", "log_disconnections=on" ]   
     healthcheck:
       test: [ "CMD-SHELL", 'pg_isready -U "$${POSTGRES_USER:-postgres}" -d "$${POSTGRES_DB:-postgres}" -h localhost || exit 1' ]
