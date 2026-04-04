@@ -35,6 +35,7 @@ class Router {
                 return false;
             }
         }
+        return true;
     }
     
     public function Add(string $method, string $route, string $target, array $rules = [], int $allowedParams = 0): void
@@ -61,6 +62,8 @@ class Router {
             http_response_code(400);
             die();
         }
+        
+        $this->MiddlewareCheck($route["rules"]);
                 
         if(str_starts_with($route["target"], "#")){
            $unhashed = substr($route["target"], 1);
